@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Olamilekan Adegbola — Cybersecurity Analyst, Penetration Tester and SOC Analyst." />
+  <title>Olamilekan Adegbola | Cybersecurity Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#070b12; --panel:#0d1420; --panel2:#101a29; --text:#edf5ff;
+      --muted:#91a0b4; --cyan:#35d7ff; --purple:#9b6cff; --line:rgba(255,255,255,.09);
+      --max:1120px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Inter,system-ui,sans-serif;background:
+      radial-gradient(circle at 15% 10%,rgba(53,215,255,.09),transparent 28%),
+      radial-gradient(circle at 85% 20%,rgba(155,108,255,.10),transparent 30%),
+      var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden
+    }
+    body:before{
+      content:"";position:fixed;inset:0;pointer-events:none;opacity:.16;
+      background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+                       linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+      background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent 75%);
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(var(--max),92%);margin:auto}
+    nav{position:sticky;top:0;z-index:20;background:rgba(7,11,18,.78);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+    .navin{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-family:"JetBrains Mono",monospace;font-weight:700;letter-spacing:.04em}
+    .brand span{color:var(--cyan)}
+    .links{display:flex;gap:24px;color:var(--muted);font-size:.92rem}
+    .links a:hover{color:var(--text)}
+    .hero{min-height:calc(100vh - 72px);display:grid;align-items:center;padding:90px 0 70px}
+    .eyebrow{font-family:"JetBrains Mono",monospace;color:var(--cyan);font-size:.85rem;margin-bottom:16px}
+    h1{font-size:clamp(2.8rem,8vw,6.6rem);line-height:.96;letter-spacing:-.06em;max-width:900px}
+    h1 .accent{background:linear-gradient(90deg,var(--cyan),var(--purple));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{max-width:720px;color:var(--muted);font-size:1.08rem;margin:26px 0 32px}
+    .buttons{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{padding:12px 18px;border:1px solid var(--line);border-radius:10px;font-weight:700;font-size:.9rem;background:var(--panel)}
+    .btn.primary{border-color:transparent;background:linear-gradient(90deg,var(--cyan),var(--purple));color:#061018}
+    .btn:hover{transform:translateY(-2px);transition:.2s}
+    .status{margin-top:48px;display:flex;align-items:center;gap:10px;color:#a9b6c8;font-size:.9rem}
+    .dot{width:9px;height:9px;border-radius:50%;background:#55e6a5;box-shadow:0 0 16px #55e6a5}
+    section{padding:90px 0}
+    .section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:34px}
+    .kicker{font-family:"JetBrains Mono",monospace;color:var(--cyan);font-size:.78rem}
+    h2{font-size:clamp(2rem,5vw,3.3rem);line-height:1.05;letter-spacing:-.04em;margin-top:8px}
+    .section-head p{max-width:500px;color:var(--muted)}
+    .grid2{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.018));border:1px solid var(--line);border-radius:18px;padding:26px}
+    .card p{color:var(--muted)}
+    .terminal{font-family:"JetBrains Mono",monospace;background:#05080d;border-radius:14px;border:1px solid var(--line);padding:20px;color:#b7c6d9;min-height:100%}
+    .terminal .prompt{color:var(--cyan)} .terminal .ok{color:#70e0a8}
+    .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+    .tag{font-family:"JetBrains Mono",monospace;font-size:.78rem;padding:8px 11px;border:1px solid var(--line);border-radius:999px;color:#c8d5e6;background:rgba(255,255,255,.025)}
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .project{position:relative;overflow:hidden}
+    .project:after{content:"";position:absolute;inset:auto -30px -60px auto;width:150px;height:150px;border-radius:50%;background:rgba(53,215,255,.08);filter:blur(20px)}
+    .num{font-family:"JetBrains Mono",monospace;color:var(--purple);font-size:.78rem}
+    .project h3{font-size:1.3rem;margin:12px 0 8px}
+    .project p{font-size:.93rem;margin-bottom:18px}
+    .meta{display:flex;flex-wrap:wrap;gap:7px}
+    .meta span{font-size:.72rem;padding:5px 8px;border-radius:7px;background:#121d2d;color:#aebbd0}
+    .timeline{display:grid;gap:16px}
+    .role{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:22px 0;border-top:1px solid var(--line)}
+    .role:first-child{border-top:0}
+    .date{font-family:"JetBrains Mono",monospace;color:var(--cyan);font-size:.75rem}
+    .role h3{margin-bottom:5px}
+    .role p{color:var(--muted)}
+    .contact{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .contact a{display:block}
+    .contact strong{display:block;margin-bottom:5px}
+    footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.85rem}
+    .small{font-size:.82rem;color:var(--muted)}
+    @media(max-width:800px){
+      .links{display:none}.grid2,.projects,.contact{grid-template-columns:1fr}
+      .role{grid-template-columns:1fr;gap:5px}.hero{padding-top:60px}
+      section{padding:65px 0}.section-head{display:block}.section-head p{margin-top:15px}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap navin">
+      <a class="brand" href="#top">LEKAN<span>_SEC</span></a>
+      <div class="links">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a>
+        <a href="#experience">Experience</a><a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <header class="hero wrap">
+      <div>
+        <div class="eyebrow">// CYBERSECURITY PORTFOLIO</div>
+        <h1>Olamilekan <span class="accent">Adegbola.</span></h1>
+        <p>
+          Cybersecurity Analyst, Penetration Tester and SOC Analyst in training.
+          I build practical security skills through vulnerability assessment,
+          security monitoring, hands-on labs and documented security projects.
+        </p>
+        <div class="buttons">
+          <a class="btn primary" href="#projects">VIEW PROJECTS</a>
+          <a class="btn" href="#contact">CONTACT ME</a>
+        </div>
+        <div class="status"><span class="dot"></span> Open to cybersecurity opportunities</div>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="kicker">01 / ABOUT</div><h2>Security with a practical mindset.</h2></div>
+          <p>I focus on learning by doing: testing, investigating, documenting and improving.</p>
+        </div>
+        <div class="grid2">
+          <div class="card">
+            <p>
+              I'm building my career in cybersecurity with hands-on experience across
+              penetration testing, vulnerability assessment and SOC fundamentals.
+              My training has included Linux security labs, network reconnaissance,
+              web security testing, log analysis and security reporting.
+            </p>
+            <br>
+            <p>
+              I enjoy turning technical findings into clear reports that teams can
+              understand and act on.
+            </p>
+          </div>
+          <div class="terminal">
+            <div><span class="prompt">$ whoami</span></div>
+            <div>olamilekan_adegbola</div><br>
+            <div><span class="prompt">$ focus</span></div>
+            <div>Cybersecurity / Pentesting / SOC</div><br>
+            <div><span class="prompt">$ environment</span></div>
+            <div>Linux / Windows / Virtual Labs</div><br>
+            <div><span class="prompt">$ mindset</span></div>
+            <div class="ok">learn → test → document → improve</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="kicker">02 / TOOLKIT</div><h2>Security stack.</h2></div>
+          <p>Tools and technologies used across my labs and training.</p>
+        </div>
+        <div class="card">
+          <div class="skills">
+            <span class="tag">Kali Linux</span><span class="tag">Nmap</span><span class="tag">Nessus</span>
+            <span class="tag">Nikto</span><span class="tag">Burp Suite</span><span class="tag">Metasploit</span>
+            <span class="tag">Wireshark</span><span class="tag">Splunk</span><span class="tag">OWASP</span>
+            <span class="tag">TCP/IP</span><span class="tag">Linux</span><span class="tag">Windows</span>
+            <span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">React</span>
+            <span class="tag">Vite</span><span class="tag">Git/GitHub</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="kicker">03 / PROJECTS</div><h2>Hands-on work.</h2></div>
+          <p>Selected practical labs and security assessments. Detailed reports can be linked here as they are published.</p>
+        </div>
+        <div class="projects">
+          <article class="card project">
+            <div class="num">PROJECT 01</div>
+            <h3>Vulnerability Identification & Prioritisation</h3>
+            <p>Security assessment of an isolated lab target using network scanning and vulnerability assessment tools, followed by risk prioritisation and reporting.</p>
+            <div class="meta"><span>Nessus</span><span>Nmap NSE</span><span>Nikto</span><span>Reporting</span></div>
+          </article>
+          <article class="card project">
+            <div class="num">PROJECT 02</div>
+            <h3>Attack Surface Assessment</h3>
+            <p>Mapped exposed services and potential attack paths in a controlled lab environment, documenting discovered hosts, services and security findings.</p>
+            <div class="meta"><span>Nmap</span><span>Enumeration</span><span>Recon</span></div>
+          </article>
+          <article class="card project">
+            <div class="num">PROJECT 03</div>
+            <h3>SSH Log Analysis with Splunk</h3>
+            <p>Practised security monitoring and log investigation by analysing authentication activity and identifying suspicious patterns.</p>
+            <div class="meta"><span>Splunk</span><span>SIEM</span><span>Log Analysis</span></div>
+          </article>
+          <article class="card project">
+            <div class="num">PROJECT 04</div>
+            <h3>Web Security Testing</h3>
+            <p>Hands-on practice with web application security concepts including request interception, testing methodology and vulnerability identification in controlled environments.</p>
+            <div class="meta"><span>Burp Suite</span><span>OWASP</span><span>Web Security</span></div>
+          </article>
+          <article class="card project">
+            <div class="num">PROJECT 05</div>
+            <h3>Phishing Simulation Lab</h3>
+            <p>Controlled security-awareness lab work exploring phishing workflows and the indicators defenders can use to identify suspicious activity.</p>
+            <div class="meta"><span>Security Awareness</span><span>Phishing</span><span>Lab</span></div>
+          </article>
+          <article class="card project">
+            <div class="num">PROJECT 06</div>
+            <h3>Operation Apex CTF</h3>
+            <p>Practical capture-the-flag challenge work used to strengthen reconnaissance, analysis, problem solving and security investigation skills.</p>
+            <div class="meta"><span>CTF</span><span>Problem Solving</span><span>Security</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="kicker">04 / EXPERIENCE</div><h2>Learning through real tasks.</h2></div>
+        </div>
+        <div class="card timeline">
+          <div class="role">
+            <div class="date">2026 — PRESENT</div>
+            <div><h3>Network Security Analyst Intern / Penetration Testing Track</h3><p>Cybervast Academy / Cybervast Ltd. — Practical cybersecurity training, vulnerability assessment, penetration-testing labs, SOC fundamentals and security reporting.</p></div>
+          </div>
+          <div class="role">
+            <div class="date">PRACTICAL LABS</div>
+            <div><h3>Cybersecurity Labs & CTF Practice</h3><p>Hands-on work across TryHackMe-style environments, Linux, network reconnaissance, web security, SIEM analysis and controlled vulnerability testing.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="kicker">05 / CONTACT</div><h2>Let's connect.</h2></div>
+          <p>For internship, junior cybersecurity and project opportunities.</p>
+        </div>
+        <div class="contact">
+          <div class="card"><strong>Email</strong><a href="mailto:lekanadegbola869@gmail.com">lekanadegbola869@gmail.com</a></div>
+          <div class="card"><strong>Location</strong><span class="small">Agbara, Ogun State, Nigeria</span></div>
+          <div class="card"><strong>LinkedIn</strong><a href="https://www.linkedin.com/in/lekan-adegbola" target="_blank" rel="noopener noreferrer">linkedin.com/in/lekan-adegbola</a></div>
+          <div class="card"><strong>GitHub</strong><span class="small">Add your GitHub URL before publishing.</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap">© 2026 Olamilekan Adegbola · Built for cybersecurity opportunities.</div></footer>
+</body>
+</html>
